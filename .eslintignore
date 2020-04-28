@@ -1,0 +1,7 @@
+build/
+static/
+dist/
+node_modules/
+**/nim/
+**/assets/
+**/xiao-video/
