@@ -3,19 +3,18 @@ import React, { Component } from "react";
 class Clock extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      date: new Date(), 
-      counter: 1 
+    this.state = {
+      date: new Date(),
+      counter: 1,
     };
-    // this.changeCounter = this.changeCounter.bind(this)
+    this.changeCounter = this.changeCounter.bind(this);
   }
-
 
   componentDidMount() {
     this.timer = setInterval(() => {
-      this.setState({ 
-        date: new Date(), 
-        counter: 1 
+      this.setState({
+        date: new Date(),
+        counter: this.state.counter+1,
       });
     }, 1000);
 
@@ -42,9 +41,7 @@ class Clock extends Component {
     document.body.addEventListener("click", this.changeCounter);
   }
 
-  changeCounter(){
-    console.log(this)
-    debugger
+  changeCounter() {
     this.setState({
       counter: this.state.counter + 1,
     });

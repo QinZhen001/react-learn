@@ -5,7 +5,7 @@ function Cart(props) {
   return (
     <table>
       <tbody>
-        {props.data.map(d => (
+        {props.data.map((d) => (
           <tr key={d.text} onClick={() => props.onSelect(d.text)}>
             <td>{d.text}</td>
             <td>{d.count}</td>
@@ -18,8 +18,10 @@ function Cart(props) {
 }
 
 export default class CartSample extends Component {
-  state = {
-     title: "123",
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "123",
       name: "",
       goods: [
         { text: "百万年薪架构师", price: 100, id: 1 },
@@ -27,29 +29,23 @@ export default class CartSample extends Component {
         { text: "Python爬虫", price: 60, id: 3 },
       ],
       cart: [],
+    };
   }
-
-  constructor(props) {
-    super(props);
-
-
-    setTimeout(() => {
+  componentDidMount(){
       this.setState({ title: "react购物车" });
-    }, 1000);
   }
-  handleChange = e =>{
-    console.log(this)
-    debugger
+
+  handleChange = (e) => {
     this.setState({
       name: e.target.value,
     });
   };
-  addGood() {
+  addGood = () => {
     this.setState({
       goods: [...this.state.goods, { text: this.state.name, price: 666 }],
     });
   };
-  addCart(good) {
+  addCart = (good) => {
     const item = this.state.cart.find((c) => c.text === good.text);
     if (item) {
       item.count += 1;
@@ -57,7 +53,7 @@ export default class CartSample extends Component {
     } else {
       this.setState({ cart: [...this.state.cart, { ...good, count: 1 }] });
     }
-  }
+  };
 
   //   子父通信
   onSelect = (name) => {
