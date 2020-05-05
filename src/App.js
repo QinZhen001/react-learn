@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Day1 from "./pages/day1/Day1"
+import Day1 from "./pages/day1/index"
 
 
 function App() {

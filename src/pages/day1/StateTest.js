@@ -14,7 +14,7 @@ class Clock extends Component {
     this.timer = setInterval(() => {
       this.setState({
         date: new Date(),
-        counter: this.state.counter+1,
+        counter: this.state.counter + 1,
       });
     }, 1000);
 
@@ -71,3 +71,4 @@ export default class SatateTest extends Component {
     );
   }
 }
+
