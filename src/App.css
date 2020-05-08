@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+body{
+  padding: 10px;
+}
+
+.item{
+  border: 1px solid red;
+}
+
+
+.item:not(:first-child){
+  margin-top: 20px;
+}
+
+
+
+
+
