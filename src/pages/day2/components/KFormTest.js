@@ -71,13 +71,16 @@ function kFormCreate(Comp) {
       // 选项告诉我们如何校验  所有option最终都会存到this.options
       this.options[field] = option;
       return InputComp => (
-       <div>
-         <InputComp 
-            name={field}
-            value={this.state[field] || ""}
-            onChange={this.handleChange}  //执行校验设置状态等
-            ></InputComp>
-       </div>
+        <div>
+        {React.cloneElement(InputComp, {
+          name: field,
+          value: this.state[field] || "",
+          onChange: this.handleChange //执行校验设置状态等
+        })}
+        {this.state[field + "Message"]?
+        <p style={{color:"red"}}>{this.state[field + "Message"]}</p>:""
+       }
+      </div>
       )
     }
 
@@ -93,14 +96,50 @@ function kFormCreate(Comp) {
 }
 
 
+// ----------------------------------
+
 
 @kFormCreate
 class KFormTest extends React.Component {
-  
+  onSubmit = () => {
+    this.props.validateFields((isValid,values)=>{
+      if(isValid){
+        alert("登录啦！");
+      }else{
+        alert("校验失败！");
+      }
+    })
+  }
+
+  render(){
+    const { getFieldDec } = this.props;
+    return (
+      <div>
+        <div>
+        {
+          getFieldDec("username",{
+            rules:[{
+              required: true,
+              message:"Please input your username"
+            }]
+          })(<input type="text"/>)
+        }
+        </div>
+        <div>
+          {
+            getFieldDec("password", {
+              rules: [{ required: true, message: "Please input your Password!" }]
+            })(<input type="password" />)
+          }
+        </div>
+        <button onClick={this.onSubmit}>登录</button>
+      </div>
+    )
+  }
 }
 
 
-
+export default KFormTest
 
 
 
