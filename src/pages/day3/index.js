@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 
+// import KFormTest from "./components/KFormTest"
+
 export default class Day3 extends Component {
-  test = (e) => {
-    console.log("day3", this);
-  };
+
 
   render() {
     return (
       <div>
-        <div className="header" onClick={this.test}>
-          第三天
+        <div className="header">
+        </div>
+        <div className="item">
+          <p>自定义form组件</p> 
+          {/* <KFormTest></KFormTest> */}
         </div>
       </div>
     );
