@@ -14,7 +14,7 @@ export default class Day1 extends Component {
   render() {
     return (
       <div>
-        <div>第一天</div>
+        <div className="header">第一天</div>
         <div className="item">
           <JsxTest></JsxTest>
         </div>

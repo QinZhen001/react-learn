@@ -8,7 +8,7 @@ export default class Day2 extends Component {
   render(){
     return (
       <div>
-        <div>第二天</div>
+        <div className="header">第二天</div>
         <div className="item">
           <p>测试 hook</p>
           <HookTest></HookTest>
