@@ -3,8 +3,7 @@ import { Form, Icon, Input, Button } from "antd";
 
 class NormalLoginForm extends React.Component {
   handleSubmit = (e) => {
-    console.log("handleSubmit", this);
-    debugger
+    console.log("handleSubmit", this);    
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if(!err){
