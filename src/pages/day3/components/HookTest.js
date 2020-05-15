@@ -45,7 +45,10 @@ const FruitAdd = connect()(function ({ dispatch }) {
   const [pname, setPname] = useState("");
 
   const onAddFruit = (e) => {
-    console.log(e);
+    // console.log("dispatch",dispatch)
+    // dispatch({type:"test",payload:{aaa:"aaa",bbb:"bbb"}})
+    // debugger
+    // console.log(e);
     if (e.key === "Enter") {
       dispatch({ type: "add", payload: pname });
       setPname("");
@@ -134,6 +137,7 @@ function HookTest({ fruits, loading, asyncFetch }) {
       clearInterval(timer);
     };
   }, []);
+
 
   return (
     <BrowserRouter>

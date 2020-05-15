@@ -26,10 +26,13 @@ export const asyncFetch = (payload) => {
   };
 };
 
-export default function fruitReducer(state = {
-  list:[],
-  loading:false
-}, action) {
+export default function fruitReducer(
+  state = {
+    list: [],
+    loading: false,
+  },
+  action
+) {
   switch (action.type) {
     case "init":
       return { ...state, list: action.payload };
@@ -39,6 +42,8 @@ export default function fruitReducer(state = {
       return { ...state, loading: true };
     case "loading_end":
       return { ...state, loading: false };
+    case "test":
+      return { ...state, ...action.payload };
     default:
       return state;
   }
