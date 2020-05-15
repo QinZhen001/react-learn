@@ -72,12 +72,14 @@ export function compose(...funcs) {
 }
 
 function bindActionCreator(creator, dispatch) {
+  // mapDispatchToProps 里面的东西 相当于creator
   return (...args) => dispatch(creator(...args));
 }
 
+// 用于 mapDispatchToProps
 export function bindActionCreators(creators, dispatch) {
   return Object.keys(creators).reduce((ret, item) => {
     ret[item] = bindActionCreator(creators[item],dispatch)
     return ret
-  }, []);
+  }, {});
 }
