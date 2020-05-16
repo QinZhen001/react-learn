@@ -12,6 +12,105 @@
 
 
 
+### redux中间件机制
+
+
+
+[ https://www.jianshu.com/p/ae7b5a2f78ae ]( https://www.jianshu.com/p/ae7b5a2f78ae )
+
+
+
+ 增加了 middleware 后，我们就可以在这途中对 action 进行截获，并进行改变 。
+
+
+
+```js
+const middlewareChain = middlewares.map((middleware) => middleware(midApi));
+
+// 融合成最终的dispatch
+dispatch = compose(...middlewareChain)(store.dispatch);
+
+```
+
+
+
+换一种说法，中间件增强了原来dispatch的能力，或者，中间件在原来dispatch之前做了一些额外的操作
+
+
+
+
+
+### action
+
+Actions look like this:
+
+
+
+```js
+// 1. plain object
+// 2. has a type
+// 3. whatever else you want
+{
+  type: "USER_LOGGED_IN",
+  username: "dave"
+}
+```
+
+
+
+
+
+
+
+###  action creators 
+
+And, since it’s kind of annoying to write those objects by hand all the time (not to mention error-prone), Redux has the concept of “action creators” to stamp these things out:
+
+```jsx
+function userLoggedIn() {
+  return {
+    type: 'USER_LOGGED_IN',
+    username: 'dave'
+  };
+}
+```
+
+
+
+
+
+### thunk
+
+[ https://daveceddia.com/what-is-a-thunk/ ]( https://daveceddia.com/what-is-a-thunk/ )
+
+
+
+ A thunk is another word for a *function*. But it’s not just any old function. It’s a special (and uncommon) name for a function that’s returned by another. Like this: 
+
+
+
+thunk是函数的另一种说法。但它不是一个普通的函数。对于由另一个函数返回的函数，它是一个特殊(且不常见)的名称。
+
+
+ 
+
+```js
+function wrapper_function() {
+  // this one is a "thunk" because it defers work for later:
+  return function thunk() {   // it can be named, or anonymous
+    console.log('do stuff now');
+  };
+}
+```
+
+
+
+
+
+
+
+
+
 
 ## 问题
 

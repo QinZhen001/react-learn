@@ -79,7 +79,7 @@ function bindActionCreator(creator, dispatch) {
 // 用于 mapDispatchToProps
 export function bindActionCreators(creators, dispatch) {
   return Object.keys(creators).reduce((ret, item) => {
-    ret[item] = bindActionCreator(creators[item],dispatch)
-    return ret
+    ret[item] = bindActionCreator(creators[item], dispatch);
+    return ret;
   }, {});
 }
