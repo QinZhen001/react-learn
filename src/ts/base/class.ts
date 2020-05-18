@@ -1,7 +1,7 @@
 class Animal {
   name: string;
   static categoies: string[] = ['mammal', 'bird']
-  static isAnimal(a) {
+  static isAnimal(a:any) {
     return a instanceof Animal
   }
 
@@ -9,7 +9,7 @@ class Animal {
     this.name = name
   }
 
-  fun(){
+  run(){
     return `${this.name} is running`
   }
 }
@@ -30,7 +30,7 @@ const xiaobao = new Dog('xiaobao')
 
 
 class Cat extends Animal {
-  constructor(name){
+  constructor(name:any){
     super(name)
     console.log(this.name)
   }
@@ -79,5 +79,4 @@ class Cellphone implements RadioWithBattery {
 
 
 
-
-
+export {}
