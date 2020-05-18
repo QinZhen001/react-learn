@@ -1,4 +1,4 @@
-let isDone: boolean = false
+export let isDone: boolean = false
 let age: number = 20
 let binaryNumber: number = 0b1111
 
@@ -11,7 +11,7 @@ let message: string = `Hello, ${firstName}, age is ${age}`
 let u: undefined = undefined
 let n: null = null
 
-let num: number = undefined
+let num: number | undefined = undefined
 
 let notSure: any = 4
 notSure = 'maybe it is a string'

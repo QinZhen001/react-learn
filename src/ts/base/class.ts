@@ -59,7 +59,20 @@ interface RadioWithBattery extends Radio {
   checkBatteryStatus()
 }
 
+class Car implements Radio{
+  switchRadio(){
+    console.log("Car switchRadio")
+  }
+}
 
+class Cellphone implements RadioWithBattery {
+  switchRadio(){
+    console.log("Cellphone switchRadio")
+  }
+  checkBatteryStatus(){
+    console.log("Cellphone checkBatteryStatus")
+  }
+}
 
 
 
