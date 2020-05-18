@@ -19,3 +19,15 @@ const add1 = function (x: number, y: number, z: number): number {
 
 
 const add2: (x: number, y: number, z?: number) => number = add
+
+
+
+
+
+
+
+export {}
+
+
+
+

@@ -51,12 +51,12 @@ interface Radio {
 
 
 interface Battery {
-  checkBatteryStatus()
+  checkBatteryStatus():void
 }
 
 
 interface RadioWithBattery extends Radio {
-  checkBatteryStatus()
+  checkBatteryStatus():void
 }
 
 class Car implements Radio{

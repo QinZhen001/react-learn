@@ -34,3 +34,4 @@ function getLength(input: string | number): number {
 
 
 
+export {}

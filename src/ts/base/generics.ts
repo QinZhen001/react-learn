@@ -89,3 +89,8 @@ function connect(a: string, b: string): string {
 const a: IPlus<number> = plus
 const b: IPlus<string> = connect
 
+
+
+
+export {}
+

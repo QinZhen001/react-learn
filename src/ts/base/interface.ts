@@ -8,3 +8,9 @@ let viking: Person = {
   id: 12312,
   name: "viking"
 }
+
+
+
+
+
+export {}

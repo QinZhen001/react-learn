@@ -10,3 +10,6 @@ const value = 'UP'
 if(value === Direction.UP){
   console.log("gogo")
 }
+
+
+export {}
