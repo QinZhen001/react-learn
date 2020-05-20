@@ -38,22 +38,22 @@ const arr2 = echoWithLength([1, 2, 3])
 
 
 class Queue<T>{
-  private data = []
+  private data: Array<T> = []
   push(item: T) {
     return this.data.push(item)
   }
-  pop(): T {
+  pop(): T | undefined {
     return this.data.shift()
   }
 }
 
 const queue = new Queue<number>()
 queue.push(1)
-console.log(queue.pop().toFixed())
+console.log(<number>queue.pop().toFixed())
 
 const queue2 = new Queue<string>()
 queue2.push("str")
-console.log(queue2.pop().length)
+console.log(<number>queue2.pop().length)
 
 
 
@@ -92,5 +92,5 @@ const b: IPlus<string> = connect
 
 
 
-export {}
+export { }
 
