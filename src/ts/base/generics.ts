@@ -49,11 +49,11 @@ class Queue<T>{
 
 const queue = new Queue<number>()
 queue.push(1)
-console.log(<number>queue.pop().toFixed())
+console.log((queue.pop() as number).toFixed())
 
 const queue2 = new Queue<string>()
 queue2.push("str")
-console.log(<number>queue2.pop().length)
+console.log((queue2.pop() as string).length)
 
 
 

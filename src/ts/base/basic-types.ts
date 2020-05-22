@@ -8,6 +8,7 @@ let message: string = `Hello, ${firstName}, age is ${age}`
 
 
 
+
 let u: undefined = undefined
 let n: null = null
 
@@ -19,7 +20,7 @@ notSure = true
 
 
 
-notSure.myName
+// notSure.myName
 notSure.getName()
 
 
