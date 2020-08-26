@@ -1,3 +1,5 @@
+import { func } from "prop-types"
+
 // 可索引类型 Interface
 interface StringSet {
   readonly [index: number]: string
@@ -119,3 +121,18 @@ function getCounter(): Counter {
 }
 
 
+// function concat<T, U>(arr: T[], arr2: U[]): Array<T | U>
+
+
+// function extend<T, U>(first: T, second: U): T & U {
+//   let result = {} as T & U
+//   for (let id in first){
+//     (result as any)[id] = (first as any)[id];
+//   }
+//   for (let id in second) {
+//     if (!result.hasOwnProperty(id)) {
+//         (result as any)[id] = (<any>second)[id];
+//     }
+// }
+// return result;
+// }
