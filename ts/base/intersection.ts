@@ -1,10 +1,10 @@
-// interface First {
-//   test:string
-// }
+interface First {
+  test:string
+}
 
-// interface Second{
-//   test:string
-// }
+interface Second{
+  test:string
+}
 
 // interface First implements object{
 //   test:string

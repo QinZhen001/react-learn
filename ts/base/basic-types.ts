@@ -66,17 +66,17 @@ let c: Color = Color.Red
 
 // -------------------------- unknwon ------------------------------
 declare const maybe: unknown
-function unknwon() {
+// function unknwon() {
 
-  const aNUmber: number = maybe
-  if(maybe === true){
+//   const aNUmber: number = maybe
+//   if(maybe === true){
 
-  }
+//   }
 
-  if(typeof maybe === "string"){
+//   if(typeof maybe === "string"){
 
-  }
-}
+//   }
+// }
 
 
 
@@ -95,7 +95,7 @@ function fn(x:(a:string,b:string,c:number)=>void){}
 
 var xxx:Example
 
-fn(xxx.diff)
+// fn(xxx.diff)
 
 interface Moment {
   utcOffset():number
@@ -133,15 +133,15 @@ mySearch("asdasd","asdasd")
 
 
 class Animal {
-  name: string;
+  // name: string;
 }
 class Dog extends Animal {
-  breed: string;
+  // breed: string;
 }
 
 // 错误：使用数值型的字符串索引，有时会得到完全不同的Animal!
 interface NotOkay {
-  [x: number]: Animal;
+  // [x: number]: Animal;
   [x: string]: Dog;
 }
 
