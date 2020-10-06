@@ -3,6 +3,19 @@ import Meno from "./components/Memo";
 import Ref from './components/Ref'
 import './index.css'
 
+const req = require.context('./components',true)
+console.log('req',req)
+const keys =  req.keys()
+
+console.log('req.id',req.id)
+console.log('keys',keys)
+const item =  req(keys[1])
+console.log('item',item)
+
+const resolve = req.resolve(keys[1])
+console.log('resolve',resolve)
+
+
 export default function Day3() {
   const [value, setValue] = useState(0);
   const [other, setOther] = useState( {
