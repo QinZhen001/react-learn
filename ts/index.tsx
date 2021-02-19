@@ -118,6 +118,25 @@ type Pick<T,K extends keyof T> = {
 
 
 
+class Test{
+  constructor(){}
+}
+
+Test.prototype.xxx = function(){
+  
+}
+
+
+
+
+
+
+
+class A {
+  attributeId:string;
+}
+A.prototype.attributeId = "InternalId";
+
 
 
 
