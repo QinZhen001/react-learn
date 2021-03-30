@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useReducer, useContext } from "react";
 import { connect } from "react-redux";
 import { BrowserRouter, Link, Route, Redirect, Switch } from "react-router-dom";
-import { login } from "../../../store/user.redux";
-import { asyncFetch } from "../../../store/fruit.redux";
+import { login } from "../../day8/store/user.redux";
+import { asyncFetch } from "../../day8/store/fruit.redux";
 import { removeFileItem } from "antd/lib/upload/utils";
 
 function FruitList({ fruits, setFruit }) {

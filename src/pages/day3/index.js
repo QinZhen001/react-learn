@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import KFormTest from "./components/KFormTest";
 import HookTest from "./components/HookTest";
 
-import store from "../../store/index";
+import store from "../day8/store/index";
 import { Provider } from "react-redux";
 
 export default class Day3 extends Component {

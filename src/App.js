@@ -11,9 +11,11 @@ import Day4 from './pages/day4'
 import Day5 from './pages/day5'
 import Day6 from './pages/day6'
 import Day7 from './pages/day7'
+import Day8 from './pages/day8'
 
 
-
+// import SearchStore from './pages/day8/store1/serch'
+// const searchStore  = new  SearchStore()
 
 function App() {
   return (
@@ -29,7 +31,8 @@ function App() {
       </Day4> */}
       {/* <Day5></Day5> */}
       {/* <Day6></Day6> */}
-      <Day7></Day7>
+      {/* <Day7></Day7> */}
+      {<Day8></Day8>}
     </div>
   );
 }
