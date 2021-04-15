@@ -27,6 +27,10 @@ import React, { Component, useState, createRef, Children } from "react";
 
 // import {leo} from './store1/index'
 
+// test reaction
+
+
+
 import { observer } from "mobx-react";
 import { useStores } from "./store1/serch";
 

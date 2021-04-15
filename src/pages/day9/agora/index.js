@@ -1,22 +1,13 @@
-import AgoraRTC from 'agora-rtc-sdk-ng'
+import AgoraRTC from "agora-rtc-sdk-ng";
 
-const client =  AgoraRTC.createClient({
-    mode:"rtc",
-    codec: "vp8"
-})
+const client = AgoraRTC.createClient({
+  mode: "rtc",
+  codec: "vp8",
+});
 
-console.log('client',client)
+const rtc = {
+  client: null,
+  localAudioTrack: null,
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const options = {};
