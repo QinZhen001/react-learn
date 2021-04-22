@@ -14,6 +14,11 @@ import React from 'react'
 import './rxjs/index3'
 
 
+//  尝试引入本地的ui库 （失败）
+// import all from '/Users/qz/Documents/company_project/cloudclass-desktop/packages/agora-classroom-sdk/src/ui-kit/index.ts'
+// console.log('all',all)
+
+
 const Day10 = () => {
   return <div>
     asdad

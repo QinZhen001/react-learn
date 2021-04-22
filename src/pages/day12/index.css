@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+}
+
+.App{
+    width: 100%;
+    height: 100%;
+    overflow:scroll;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+}
+
+.test{
+    display: inline-block;
+    width: 260px;
+    height: 100vh;
+    background: rebeccapurple;
+}
+
+
+button {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,5 @@
 import React from "react";
-import "./App.css";
-
-import Ref from "./pages/day4/components/Ref";
+// import "./App.css";
 
 import Day1 from "./pages/day1";
 import Day2 from "./pages/day2";
@@ -14,6 +12,7 @@ import Day8 from "./pages/day8";
 import Day9 from "./pages/day9";
 import Day10 from './pages/day10'
 import Day11 from './pages/day11'
+import Day12 from './pages/day12'
 
 // import SearchStore from './pages/day8/store1/serch'
 // const searchStore  = new  SearchStore()
@@ -36,9 +35,13 @@ function App() {
       {/* {<Day8></Day8>} */}
       {/* <Day9></Day9> */}
        {/* <Day10></Day10>  */}
-       <Day11></Day11>
+       {/* <Day11></Day11> */}
+       <Day12></Day12>
     </div>
   );
 }
 
 export default App;
+
+
+
